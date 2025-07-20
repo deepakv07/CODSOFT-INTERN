@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main() {
+    double num1, num2;
+    char opr;
+    //enter the numbers and req operator..
+    cin>>num1>>opr>>num2;
+    //switch statement is used to selected one block of code to run
+    switch(opr) {
+        case '+':
+            cout << "Result: " << num1 + num2 << endl;
+            break;
+        case '-':
+            cout << "Result: " << num1 - num2 << endl;
+            break;
+        case '*':
+            cout << "Result: " << num1 * num2 << endl;
+            break;
+        case '/':
+            if(num2 != 0)
+                cout << "Result: " << num1 / num2 << endl;
+            else
+                cout << "Error: Division by zero!" << endl;
+            break;
+        default:
+            cout << "Invalid operator!" << endl;
+    }
+
+    return 0;
+}
